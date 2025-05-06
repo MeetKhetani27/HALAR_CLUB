@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halar Club - Trainee</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .trainee-section {
+            padding: 120px 5% 60px;
+        }
+        
+        .trainee-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .trainee-content h1 {
+            color: #333;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .programs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .program-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .program-image {
+            height: 200px;
+            background: #ddd;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .program-details {
+            padding: 1.5rem;
+        }
+        
+        .program-details h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .program-details p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .enroll-btn {
+            display: inline-block;
+            background: #ffd700;
+            color: black;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .enroll-btn:hover {
+            background: #ffed4a;
+        }
+        
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 1000;
+        }
+        
+        .preloader-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .preloader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #333;
+            border-top-color: #ffd700;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .preloader-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        .fade-out {
+            animation: fadeOut 0.5s;
+        }
+        
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="transparent-header">
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="D:\HALAR CLUB\logo-removebg.png" alt="Halar Club Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="trainee.html" class="active">Trainee</a>
+                <a href="events.html">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="call-button">
+                <a href="tel:+1234567890" class="call-btn">
+                    <i class="fas fa-phone"></i>
+                    <span>Call Now</span>
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="trainee-section">
+            <div class="trainee-content">
+                <h1>Training Programs</h1>
+                <div class="programs">
+                    <div class="program-card">
+                        <div class="program-image" style="background-image: url('assets/beginner.jpg');"></div>
+                        <div class="program-details">
+                            <h3>Beginner Course</h3>
+                            <p>Perfect for those new to horse riding. Learn basic techniques, safety, and horse care.</p>
+                            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card">
+                        <div class="program-image" style="background-image: url('assets/intermediate.jpg');"></div>
+                        <div class="program-details">
+                            <h3>Intermediate Training</h3>
+                            <p>Advance your skills with specialized training in different riding styles and techniques.</p>
+                            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card">
+                        <div class="program-image" style="background-image: url('assets/advanced.jpg');"></div>
+                        <div class="program-details">
+                            <h3>Advanced Program</h3>
+                            <p>Competition-level training for experienced riders aiming for excellence.</p>
+                            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Halar Club is dedicated to providing exceptional equestrian experiences through professional training, modern facilities, and a supportive community.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Horse Club Road, City</p>
+                <p><i class="fas fa-phone"></i> +1234567890</p>
+                <p><i class="fas fa-envelope"></i> info@halarclub.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Halar Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/1234567890" class="whatsapp-icon" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
